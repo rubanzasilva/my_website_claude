@@ -5,7 +5,19 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
+  const navItems = [
+    { name: 'Home', href: 'home' },
+    { name: 'About', href: 'about' },
+    { name: 'Projects', href: 'projects' },
+    { name: 'Skills', href: 'skills' },
+    { name: 'Experience', href: 'experience' },
+    { name: 'Contact', href: 'contact' },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-sm border-b border-secondary/20">
@@ -18,20 +30,20 @@ const Header = () => {
           
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-white hover:text-accent transition-colors">
-              Home
-            </a>
-            <a href="#projects" className="text-white hover:text-accent transition-colors">
-              Projects
-            </a>
-            <a href="#contact" className="text-white hover:text-accent transition-colors">
-              Contact
-            </a>
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              >
+                {item.name}
+              </button>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
+            onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white p-2"
             aria-label="Toggle menu"
           >
@@ -43,27 +55,15 @@ const Header = () => {
         {isOpen && (
           <nav className="md:hidden py-4 border-t border-secondary/20">
             <div className="flex flex-col space-y-4">
-              <a 
-                href="#home" 
-                className="text-white hover:text-accent transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </a>
-              <a 
-                href="#projects" 
-                className="text-white hover:text-accent transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Projects
-              </a>
-              <a 
-                href="#contact" 
-                className="text-white hover:text-accent transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </a>
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  {item.name}
+                </button>
+              ))}
             </div>
           </nav>
         )}
