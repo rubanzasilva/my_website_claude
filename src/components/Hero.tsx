@@ -24,16 +24,6 @@ const Hero = () => {
               integrated into software solutions.
             </p>
 
-            {/* Center CTA button */}
-            <div className="flex justify-center lg:justify-start mb-8">
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="text-accent hover:text-white transition-colors flex items-center gap-2"
-              >
-                <span>View My Projects</span>
-                <ChevronDown className="w-5 h-5" />
-              </button>
-            </div>
           </div>
 
           {/* Right Column - Image */}
@@ -55,9 +45,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Bottom scroll indicator - visible on mobile */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce lg:hidden">
-          <ChevronDown className="w-8 h-8 text-accent" />
+        {/* Centered CTA button with drop down effect */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="text-accent hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
+          >
+            <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
+            <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
+          </button>
         </div>
       </div>
     </section>
