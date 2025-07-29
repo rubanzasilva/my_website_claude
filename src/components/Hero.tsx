@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           
@@ -24,29 +24,14 @@ const Hero = () => {
               integrated into software solutions.
             </p>
 
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row justify-center lg:justify-start items-center gap-4 mb-8">
+            {/* Center CTA button */}
+            <div className="flex justify-center lg:justify-start mb-8">
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="btn-primary px-8 py-3 rounded-full text-white font-medium w-full sm:w-auto"
+                className="text-accent hover:text-white transition-colors flex items-center gap-2"
               >
-                View My Projects
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="btn-secondary px-8 py-3 rounded-full text-accent font-medium w-full sm:w-auto"
-              >
-                Contact Me
-              </button>
-            </div>
-
-            {/* Learn more button for larger screens */}
-            <div className="hidden lg:block">
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-accent hover:text-white transition-colors flex items-center gap-2 mx-auto lg:mx-0"
-              >
-                <span>Learn more about me</span>
-                <ChevronDown size={20} />
+                <span>View My Projects</span>
+                <ChevronDown className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -72,7 +57,7 @@ const Hero = () => {
 
         {/* Bottom scroll indicator - visible on mobile */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce lg:hidden">
-          <ChevronDown size={32} className="text-accent" />
+          <ChevronDown className="w-8 h-8 text-accent" />
         </div>
       </div>
     </section>
