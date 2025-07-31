@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           
@@ -24,31 +24,6 @@ const Hero = () => {
               integrated into software solutions.
             </p>
 
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row justify-center lg:justify-start items-center gap-4 mb-8">
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="btn-primary px-8 py-3 rounded-full text-white font-medium w-full sm:w-auto"
-              >
-                View My Projects
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="btn-secondary px-8 py-3 rounded-full text-accent font-medium w-full sm:w-auto"
-              >
-                Contact Me
-              </button>
-            </div>
-
-            {/* Learn more button for larger screens */}
-            <div className="hidden lg:block">
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-accent hover:text-white transition-colors flex items-center gap-2 mx-auto lg:mx-0"
-              >
-                <span>Learn more about me</span>
-                <ChevronDown size={20} />
-              </button>
-            </div>
           </div>
 
           {/* Right Column - Image */}
@@ -70,9 +45,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Bottom scroll indicator - visible on mobile */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce lg:hidden">
-          <ChevronDown size={32} className="text-accent" />
+        {/* Centered CTA button with drop down effect */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="text-accent hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
+          >
+            <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
+            <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
+          </button>
         </div>
       </div>
     </section>

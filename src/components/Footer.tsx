@@ -109,7 +109,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-accent" />
                 <div>
                   <p className="text-white font-medium">Email</p>
-                  <p className="text-gray-300">contact@rubanzasilver.com</p>
+                  <p className="text-gray-300">abc@rubanzasilver.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -143,7 +143,7 @@ const Footer = () => {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="mailto:rubanzasilva@gmail.com"
+                  href="mailto:abc@rubanzasilver.com"
                   className="flex items-center justify-center w-12 h-12 bg-secondary/20 hover:bg-accent text-white rounded-full transition-colors"
                   aria-label="Email"
                 >
