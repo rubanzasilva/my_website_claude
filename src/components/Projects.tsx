@@ -4,6 +4,17 @@ import { Project } from '@/types';
 const Projects = () => {
   const projects: Project[] = [
     {
+      id: 'modal-deployment',
+      title: 'ML model deployment with Modal',
+      description: 'Serving and deploying a sticker sales forecasting machine learning model using Modal',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/dalle_deployment.webp',
+      category: 'ML/AI model serving and deployment',
+      links: {
+        article: 'https://sticker-sales.flexiblefunctions.com/'
+      },
+      tags: ['Modal', 'Sales Forecasting', 'Deployment', 'FastAI']
+    },
+    {
       id: 'bentoml-deployment',
       title: 'ML model deployment with BentoML',
       description: 'Serving and deploying a binary classification machine learning model using BentoML',
