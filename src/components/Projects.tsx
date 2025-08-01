@@ -7,7 +7,7 @@ const Projects = () => {
       id: 'modal-deployment',
       title: 'ML model deployment with Modal',
       description: 'Serving and deploying a sticker sales forecasting machine learning model using Modal',
-      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/dalle_deployment.webp',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/ss.png',
       category: 'ML/AI model serving and deployment',
       links: {
         article: 'https://sticker-sales.flexiblefunctions.com/'
