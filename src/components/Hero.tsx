@@ -36,7 +36,7 @@ const Hero = () => {
                     alt="Rubanza Silver"
                     width={384}
                     height={384}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[center_5%]"
                     priority
                   />
                 </div>
