@@ -5,8 +5,12 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (item: { name: string; href: string; external?: boolean }) => {
+    if (item.external) {
+      window.open(item.href, '_blank');
+    } else {
+      document.getElementById(item.href)?.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsOpen(false);
   };
 
@@ -16,7 +20,9 @@ const Header = () => {
     { name: 'Projects', href: 'projects' },
     // { name: 'Skills', href: 'skills' },
     // { name: 'Experience', href: 'experience' },
+    { name: 'Resume', href: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_Data_Scientist.pdf', external: true },
     { name: 'Contact', href: 'contact' },
+    
   ];
 
   return (
@@ -33,7 +39,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className="text-gray-300 hover:text-white transition-colors cursor-pointer"
               >
                 {item.name}
@@ -58,7 +64,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="text-gray-300 hover:text-white transition-colors text-left"
                 >
                   {item.name}
