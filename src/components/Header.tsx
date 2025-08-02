@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,31 +31,39 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold">
-            <span className="text-white">Rubanza</span>
+            {/*<span className="text-black dark:text-white">Rubanza</span>*/}
+            <span className="gradient-text">Rubanza</span>
             <span className="gradient-text">Silver</span>
           </div>
           
           {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item)}
-                className="text-gray-300 hover:text-white transition-colors cursor-pointer"
-              >
-                {item.name}
-              </button>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item)}
+                  className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
+                  /* className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer" */
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
+            <ThemeToggle />
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-black dark:text-white p-2"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -65,7 +74,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
-                  className="text-gray-300 hover:text-white transition-colors text-left"
+                  className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors text-left"
                 >
                   {item.name}
                 </button>

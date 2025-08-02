@@ -18,7 +18,7 @@ const Hero = () => {
               Hi, I am <span className="gradient-text font-semibold">Rubanza Silver</span>
             </h1>
             
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 dark:text-gray-300 mb-8 leading-relaxed">
               A coder with a background in Software Engineering. My work focuses on the 
               machine learning lifecycle from data analysis to model deployment, 
               integrated into software solutions.
@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('projects')}
-            className="text-accent hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
+            className="text-accent hover:text-black dark:hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
           >
             <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
             <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />

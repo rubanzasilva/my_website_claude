@@ -24,14 +24,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-        <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+        <h3 className="text-xl font-semibold text-black dark:text-white mb-3">{project.title}</h3>
+        <p className="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-primary text-gray-300 px-2 py-1 rounded text-sm"
+              className="bg-primary text-black dark:text-gray-300 px-2 py-1 rounded text-sm"
             >
               {tag}
             </span>
