@@ -31,7 +31,8 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold">
-            <span className="text-black dark:text-white">Rubanza</span>
+            {/*<span className="text-black dark:text-white">Rubanza</span>*/}
+            <span className="gradient-text">Rubanza</span>
             <span className="gradient-text">Silver</span>
           </div>
           
@@ -42,7 +43,8 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
-                  className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
+                  className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
+                  /* className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer" */
                 >
                   {item.name}
                 </button>
