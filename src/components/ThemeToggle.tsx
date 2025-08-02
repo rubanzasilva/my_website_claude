@@ -3,7 +3,7 @@
 import { useTheme } from './ThemeProvider'
 
 export default function ThemeToggle() {
-  const { theme, setTheme, actualTheme } = useTheme()
+  const { setTheme, actualTheme } = useTheme()
 
   return (
     <button
