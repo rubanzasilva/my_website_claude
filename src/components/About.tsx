@@ -65,7 +65,8 @@ const About = () => {
             intersection of machine learning and software development. My work encompasses 
             various stages of the machine learning lifecycle:
           </p>
-          <ul className="mt-4 text-gray-300 space-y-2">
+          <ul className="mt-4 gradient-text-300 space-y-2">
+          {/*<ul className="mt-4 text-gray-300 space-y-2">*/}
             <li>• Exploratory Data Analysis and Data Wrangling</li>
             <li>• Feature Engineering and Selection</li>
             <li>• Model Building and Evaluation</li>
