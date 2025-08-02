@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-primary text-black dark:text-gray-300 px-2 py-1 rounded text-sm"
+              className=" bg-primary gradient-text dark:text-gray-300 px-2 py-1 rounded text-sm"
             >
               {tag}
             </span>
