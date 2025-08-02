@@ -58,7 +58,8 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-black dark:text-white p-2"
+              /*className="text-black dark:text-white p-2"*/
+              className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,7 +75,8 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
-                  className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors text-left"
+                  /*className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors text-left"*/
+                  className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer text-left"
                 >
                   {item.name}
                 </button>
