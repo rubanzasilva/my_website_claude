@@ -31,7 +31,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className=" bg-primary gradient-text dark:text-gray-300 px-2 py-1 rounded text-sm"
+              /*className="bg-gray-200 !text-black dark:bg-primary dark:text-gray-300 px-2 py-1 rounded text-sm"*/
+              /*className="bg-gray-200 !gradient-text px-2 py-1 rounded text-sm"*/
+              className="bg-gray-200 !gradient-text px-2 py-1 rounded text-sm border dark:bg-black dark:border-white dark:text-white"
             >
               {tag}
             </span>
@@ -44,7 +46,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.links.article}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              /*className="flex items-center gap-2 bg-accent hover:bg-accent/80 !text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"*/
+              className="flex items-center gap-2 bg-accent hover:bg-accent/80 !gradient-text px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
               <FileText size={16} />
               Read More
@@ -55,7 +58,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.links.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              /*className="flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"*/
+              className="flex items-center gap-2 border border-accent text-accent hover:bg-gray-800 hover:text-white dark:hover:bg-accent dark:hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
               <ExternalLink size={16} />
               Demo
@@ -66,7 +70,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.links.code}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-gray-500 text-gray-400 hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              /*className="flex items-center gap-2 border border-gray-500 text-gray-400 hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-colors text-sm font-medium"*/
+              className="flex items-center gap-2 border border-accent text-accent hover:bg-gray-800 hover:text-white dark:hover:bg-accent dark:hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
               <Github size={16} />
               Code
