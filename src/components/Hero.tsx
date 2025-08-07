@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
 
         {/* Centered CTA button with drop down effect */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/*<div className="absolute bottom-8 sm:bottom-6 md:bottom-4 lg:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('projects')}
             className="text-accent hover:text-black dark:hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
@@ -54,7 +54,16 @@ const Hero = () => {
             <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
             <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
           </button>
-        </div>
+        </div>*/}
+        <div className="absolute bottom-12 sm:bottom-8 md:bottom-6 lg:bottom-4 xl:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+  <button 
+    onClick={() => scrollToSection('projects')}
+    className="text-accent hover:text-black dark:hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
+  >
+    <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
+    <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
+  </button>
+</div>
       </div>
     </section>
   );
