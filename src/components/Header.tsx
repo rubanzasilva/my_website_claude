@@ -69,14 +69,15 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="md:hidden py-4 border-t border-secondary/20">
+          <nav className="md:hidden py-4 border-t border-secondary/20" style={{backgroundColor: 'var(--color-background)'}}>
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
                   /*className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors text-left"*/
-                  className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:opacity-75 transition-colors cursor-pointer text-left"
+                  style={{color: 'var(--color-foreground)'}}
                 >
                   {item.name}
                 </button>
