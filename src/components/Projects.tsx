@@ -50,6 +50,18 @@ const Projects = () => {
       tags: ['Regression', 'FastAI', 'EDA', 'Automotive']
     },
     {
+      id: 'sd-1',
+      title: 'Stable Diffusion from the Foundations',
+      description: 'Comprehensive walkthrough of Stable Diffusion, starting from the theoretical foundations and building up to a complete implementation.',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/used_cars.jpg',
+      category: 'Machine Learning',
+      links: {
+        article: 'https://stable-diffusion-1.flexiblefunctions.com',
+      },
+      tags: ['Stable Diffusion', 'Generative AI', 'AI Art']
+    },
+    
+    {
       id: 'mushroom-classification',
       title: 'Binary Prediction of Poisonous Mushrooms',
       description: 'A classification model to predict whether a mushroom is edible or poisonous based on its physical characteristics.',
