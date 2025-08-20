@@ -53,7 +53,7 @@ const Projects = () => {
       id: 'sd-1',
       title: 'Stable Diffusion from the Foundations',
       description: 'Comprehensive walkthrough of Stable Diffusion, starting from the theoretical foundations and building up to a complete implementation.',
-      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/used_cars.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/stable-diffusion-ph.webp',
       category: 'Machine Learning',
       links: {
         article: 'https://stable-diffusion-1.flexiblefunctions.com',
