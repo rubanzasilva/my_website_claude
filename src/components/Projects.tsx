@@ -56,7 +56,7 @@ const Projects = () => {
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/used_cars.jpg',
       category: 'Machine Learning',
       links: {
-        article: 'https://stable-diffusion-1.flexiblefunctions.com/lesson_9',
+        article: 'https://stable-diffusion-1.flexiblefunctions.com',
       },
       tags: ['Stable Diffusion', 'Generative AI', 'AI Art']
     },
