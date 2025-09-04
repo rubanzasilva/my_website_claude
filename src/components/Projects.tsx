@@ -96,6 +96,17 @@ const Projects = () => {
       tags: ['Computer Vision', 'FastAI', 'Deployment', 'UI/UX']
     },
     {
+      id: 'ff',
+      title: 'Flexible Functions Website',
+      description: 'Flexible functions AI is an AI lab that is building practical AI use cases in the most cost effective way possible.',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/ff_logo.webp',
+      category: 'Artificial Intelligence',
+      links: {
+        demo: 'https://www.flexiblefunctions.com/'
+      },
+      tags: ['AI', 'Machine learning', 'Dataset']
+    },
+    {
       id: 'zicofe',
       title: 'Zigoti Coffee Website',
       description: 'Zigoti Coffee is a Ugandan coffee house that covers the whole value chain from growing, buying, processing, roasting, and export of Ugandan Coffee beans.',
