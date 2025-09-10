@@ -19,9 +19,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 dark:text-gray-300 mb-8 leading-relaxed">
-              A coder with a background in Software Engineering. My work focuses on the 
-              machine learning lifecycle from data analysis to model deployment, 
-              integrated into software solutions.
+             A machine learning engineer with a background in Software Engineering.  I build end-to-end production-ready Machine learning systems. 
+             I can work and collaborate across any part of the machine learning pipeline, especially model development, testing, and deployment.
             </p>
 
           </div>
