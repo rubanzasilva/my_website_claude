@@ -35,7 +35,7 @@ const About = () => {
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             I possess over 7+ years of hands-on machine learning experience with expertise in building ML systems from the ground up.
             I have deep knowledge of and can implement diverse architectures from scratch, 
-            ranging from gradient boosting and basic neural networks to sophisticated, large-scale neural networks that underpin today's generative AI technologies,
+            ranging from gradient boosting and basic neural networks to sophisticated, large-scale neural networks that underpin today&rsquo;s generative AI technologies,
             including image generation and the popular language language models
           </p>
         </div>
