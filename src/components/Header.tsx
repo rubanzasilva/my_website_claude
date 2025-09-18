@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import KaggleIcon from './icons/KaggleIcon';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,11 +30,23 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-sm border-b border-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold">
-            {/*<span className="text-black dark:text-white">Rubanza</span>*/}
-            <span className="gradient-text">Rubanza</span>
-            <span className="gradient-text">Silver</span>
+        <div className="flex justify-between items-center py-4 max-w-7xl mx-auto">
+          <div className="flex items-center space-x-4">
+            <a href="mailto:rubanza@rubanzasilver.com" className="gradient-text hover:opacity-75 transition-opacity">
+              <Mail size={24} />
+            </a>
+            <a href="https://linkedin.com/in/rubanzasilver" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+              <Linkedin size={24} />
+            </a>
+            <a href="https://twitter.com/rubanzasilver" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+              <Twitter size={24} />
+            </a>
+            <a href="https://github.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+              <Github size={24} />
+            </a>
+            <a href="https://kaggle.com/rubanzasilver" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+              <KaggleIcon size={24} />
+            </a>
           </div>
           
           {/* Desktop Menu */}
