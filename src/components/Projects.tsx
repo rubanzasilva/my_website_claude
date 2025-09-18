@@ -26,6 +26,17 @@ const Projects = () => {
       tags: ['BentoML', 'Machine Learning', 'Deployment', 'FastAI']
     },
     {
+      id: 'medical-llm',
+      title: 'Building an AI medical assistant',
+      description: 'Building an AI system for assisted differential diagnosis based on the Uganda Clinical Guidelines',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/symtd.webp',
+      category: 'AI in healthcare',
+      links: {
+        article: 'https://fsdp-qdora-ucg.flexiblefunctions.com/'
+      },
+      tags: ['AI in healthcare', 'Machine Learning', 'medical-llm']
+    },
+    {
       id: 'academic-success',
       title: 'Classification with the Academic Success dataset',
       description: 'A classification model to predict students dropout and academic success rate.',

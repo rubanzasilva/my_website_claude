@@ -1,6 +1,9 @@
 'use client';
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Globe, Send } from 'lucide-react';
+import { Send, Globe } from 'lucide-react';
+import { MdEmail } from 'react-icons/md';
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import KaggleIcon from './icons/KaggleIcon';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -31,8 +34,8 @@ const Footer = () => {
     <footer id="contact" className="bg-secondary/10 border-t border-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-4">Get In Touch</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Get In Touch</h3>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a question or want to work together? Feel free to reach out!
           </p>
         </div>
@@ -40,10 +43,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="bg-secondary/10 rounded-lg p-8">
-            <h4 className="text-2xl font-bold text-white mb-6">Send Me a Message</h4>
+            <h4 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Send Me a Message</h4>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-gray-300 mb-2">Your Name</label>
+                <label className="block text-gray-600 dark:text-gray-300 mb-2">Your Name</label>
                 <input
                   type="text"
                   name="name"
@@ -55,7 +58,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-300 mb-2">Your Email</label>
+                <label className="block text-gray-600 dark:text-gray-300 mb-2">Your Email</label>
                 <input
                   type="email"
                   name="email"
@@ -67,7 +70,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-300 mb-2">Subject</label>
+                <label className="block text-gray-600 dark:text-gray-300 mb-2">Subject</label>
                 <input
                   type="text"
                   name="subject"
@@ -79,7 +82,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-300 mb-2">Message</label>
+                <label className="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -102,61 +105,42 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="bg-secondary/10 rounded-lg p-8">
-            <h4 className="text-2xl font-bold text-white mb-6">Contact Information</h4>
-            
+            <h4 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Contact Information</h4>
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-accent" />
+                <MdEmail className="w-5 h-5 text-accent" />
                 <div>
-                  <p className="text-white font-medium">Email</p>
-                  <p className="text-gray-300">abc@rubanzasilver.com</p>
+                  <p className="text-gray-800 dark:text-white font-medium">Email</p>
+                  <p className="text-gray-600 dark:text-gray-300">abc@rubanzasilver.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-accent" />
                 <div>
-                  <p className="text-white font-medium">Location</p>
-                  <p className="text-gray-300">Kampala, Uganda</p>
+                  <p className="text-gray-800 dark:text-white font-medium">Location</p>
+                  <p className="text-gray-600 dark:text-gray-300">Kampala, Uganda</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h5 className="text-white font-medium mb-4">Connect With Me</h5>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/rubanzasilva"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-secondary/20 hover:bg-accent text-white rounded-full transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github size={20} />
+              <h5 className="text-gray-800 dark:text-white font-medium mb-4">Connect With Me</h5>
+              <div className="flex items-center space-x-4">
+                <a href="mailto:abc@rubanzasilver.com" className="gradient-text hover:opacity-75 transition-opacity">
+                  <MdEmail size={24} />
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/silver-rubanza/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-secondary/20 hover:bg-accent text-white rounded-full transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={20} />
+                <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+                  <FaLinkedin size={24} />
                 </a>
-                <a
-                  href="mailto:abc@rubanzasilver.com"
-                  className="flex items-center justify-center w-12 h-12 bg-secondary/20 hover:bg-accent text-white rounded-full transition-colors"
-                  aria-label="Email"
-                >
-                  <Mail size={20} />
+                <a href="https://x.com/countfettucine/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+                  <FaTwitter size={24} />
                 </a>
-                <a
-                  href="https://www.rubanzasilver.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-secondary/20 hover:bg-accent text-white rounded-full transition-colors"
-                  aria-label="Website"
-                >
-                  <Globe size={20} />
+                <a href="https://github.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+                  <FaGithub size={24} />
+                </a>
+                <a href="https://www.kaggle.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+                  <KaggleIcon size={24} />
                 </a>
               </div>
             </div>
@@ -164,7 +148,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary/20 pt-8 mt-12 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             © {currentYear} Rubanza Silver. All rights reserved.
           </p>
         </div>
