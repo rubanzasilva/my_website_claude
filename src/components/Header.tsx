@@ -40,7 +40,7 @@ const Header = () => {
             <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
               <FaLinkedin size={24} />
             </a>
-            <a href="https://x.com/countfettucine/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
+            <a href="https://x.com/rubanzasil/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
               <FaTwitter size={24} />
             </a>
             <a href="https://github.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
