@@ -24,7 +24,7 @@ const Header = () => {
     { name: 'Projects', href: 'projects' },
     // { name: 'Skills', href: 'skills' },
     // { name: 'Experience', href: 'experience' },
-    { name: 'Resume', href: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_Data_Scientist.pdf', external: true },
+    { name: 'Resume', href: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf', external: true },
     { name: 'Contact', href: 'contact' },
     
   ];
