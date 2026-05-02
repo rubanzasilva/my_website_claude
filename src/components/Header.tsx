@@ -34,7 +34,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
-            <a href="mailto:abc@rubanzasilver.com" className="gradient-text hover:opacity-75 transition-opacity">
+            <a href="mailto:abc@silverrubanza.com" className="gradient-text hover:opacity-75 transition-opacity">
               <MdEmail size={24} />
             </a>
             <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
