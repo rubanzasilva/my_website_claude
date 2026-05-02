@@ -1,0 +1,42 @@
+# Silver Rubanza
+
+> Machine Learning Engineer and Software Developer based in Kampala, Uganda. Over 7 years of hands-on ML experience building end-to-end production-ready machine learning systems, with 6+ years of software and web development. Deep expertise across the full ML lifecycle — from data analysis and feature engineering to model building, deployment, testing, and monitoring.
+
+Silver Rubanza specialises in the intersection of machine learning and software engineering. He can implement diverse architectures from scratch, ranging from gradient boosting and neural networks to large-scale generative AI systems including image generation models and large language models. Core stack: Python, PyTorch, fastai, sklearn, React, and modern web technologies.
+
+## Contact
+
+- Email: abc@silverrubanza.com
+- Website: https://silverrubanza.com
+- LinkedIn: https://www.linkedin.com/in/silver-rubanza/
+- GitHub: https://github.com/rubanzasilva
+- Kaggle: https://www.kaggle.com/rubanzasilva
+- X / Twitter: https://x.com/rubanzasil/
+
+## Skills
+
+- Machine Learning: Exploratory Data Analysis, Feature Engineering, Model Building and Evaluation
+- ML Deployment: Model serving, testing, monitoring, and integration into software solutions
+- Architectures: Gradient boosting, neural networks, diffusion models, LLMs, fine-tuning
+- Software Development: Python, PyTorch, fastai, sklearn
+- Web Development: HTML, CSS, JavaScript, React
+
+## Projects
+
+- [ML Model Deployment with Modal](https://sticker-sales.flexiblefunctions.com/): Serving and deploying a sticker sales forecasting model using Modal and FastAI
+- [ML Model Deployment with BentoML](https://nbsanity.com/static/64b506b80020adafd31defb4d6afb508/load.html): Serving and deploying a binary classification model using BentoML and FastAI
+- [AI Medical Assistant](https://fsdp-qdora-ucg.flexiblefunctions.com/): AI system for assisted differential diagnosis based on the Uganda Clinical Guidelines
+- [Stable Diffusion from the Foundations](https://stable-diffusion-1.flexiblefunctions.com): Walkthrough of Stable Diffusion from theoretical foundations to full implementation
+- [Academic Success Classification](https://www.kaggle.com/code/rubanzasilva/fastai-gradient-boosting): Predicting student dropout and academic success using FastAI and gradient boosting
+- [Used Car Price Prediction](https://www.kaggle.com/code/rubanzasilva/used-cars-eda-fastai-gradient-boosting): Regression model to predict used car prices with EDA, FastAI, and gradient boosting
+- [Mushroom Poisonous Classification](https://www.kaggle.com/code/rubanzasilva/fast-ai-gradient-boosting): Binary classification of poisonous mushrooms using FastAI and gradient boosting
+- [Insurance Cross-Selling Classification](https://www.kaggle.com/code/rubanzasilva/fastai-neural-network-gradient-boosting): Predicting customer response to automobile insurance offers
+- [Antelope Classifier](https://rubanzasilva.github.io/antelope-classifier-documentation/): Computer vision model for antelope species classification, deployed with a full UI
+- [Flexible Functions](https://www.flexiblefunctions.com/): AI lab building practical, cost-effective AI use cases
+- [Zigoti Coffee Website](https://www.zicofe.com/): E-commerce site for a Ugandan coffee house covering the full coffee value chain
+- [Suwik Investments Website](https://www.suwik.xyz/): E-commerce site for a Ugandan agricultural products exporter
+
+## Optional
+
+- Resume: https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf
+- Antelope Classifier Demo: https://huggingface.co/spaces/silvaKenpachi/antelopeClassifier
