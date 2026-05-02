@@ -46,6 +46,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.links.article}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Read more about ${project.title}`}
               /*className="flex items-center gap-2 bg-accent hover:bg-accent/80 !text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"*/
               className="flex items-center gap-2 bg-accent hover:bg-accent/80 !gradient-text px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
