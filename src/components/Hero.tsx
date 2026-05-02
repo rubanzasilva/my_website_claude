@@ -15,7 +15,7 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light mb-6">
-              Hi, I am <span className="gradient-text font-semibold">Rubanza Silver</span>
+              Hi, I am <span className="gradient-text font-semibold">Silver Rubanza</span>
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 dark:text-gray-300 mb-8 leading-relaxed">
@@ -32,7 +32,7 @@ const Hero = () => {
                 <div className="w-full h-full rounded-full overflow-hidden bg-primary">
                   <Image
                     src="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/silverPotraitCompressed.webp"
-                    alt="Rubanza Silver"
+                    alt="Silver Rubanza"
                     width={384}
                     height={384}
                     className="w-full h-full object-cover object-[center_5%]"

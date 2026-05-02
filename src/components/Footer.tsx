@@ -112,7 +112,7 @@ const Footer = () => {
                 <MdEmail className="w-5 h-5 text-accent" />
                 <div>
                   <p className="text-gray-800 dark:text-white font-medium">Email</p>
-                  <p className="text-gray-600 dark:text-gray-300">abc@rubanzasilver.com</p>
+                  <p className="text-gray-600 dark:text-gray-300">abc@silverrubanza.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -127,7 +127,7 @@ const Footer = () => {
             <div>
               <h5 className="text-gray-800 dark:text-white font-medium mb-4">Connect With Me</h5>
               <div className="flex items-center space-x-4">
-                <a href="mailto:abc@rubanzasilver.com" className="gradient-text hover:opacity-75 transition-opacity">
+                <a href="mailto:abc@silverrubanza.com" className="gradient-text hover:opacity-75 transition-opacity">
                   <MdEmail size={24} />
                 </a>
                 <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
@@ -149,7 +149,7 @@ const Footer = () => {
 
         <div className="border-t border-secondary/20 pt-8 mt-12 text-center">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {currentYear} Rubanza Silver. All rights reserved.
+            © {currentYear} Silver Rubanza. All rights reserved.
           </p>
         </div>
       </div>
