@@ -69,12 +69,12 @@ const About = () => {
           <ul className="mt-4 gradient-text-300 space-y-2">
           {/*<ul className="mt-4 text-gray-300 space-y-2">*/}
             <li>• Exploratory Data Analysis and Data Wrangling</li>
-            <li>• Feature Engineering and Selection</li>
+            <li>• Feature Engineering </li>
             <li>• Model Building and Evaluation</li>
             <li>• Deployment, Testing, and Monitoring</li>
           </ul>
           <p className="text-gray-300 leading-relaxed mt-4">
-            I am proficient with Python, PyTorch, and many other libraries such as fastai and 
+            I am proficient with Python, PyTorch, and many other libraries such as fastaSi and 
             sklearn. Additionally, I have over 6 years of experience developing software 
             applications using HTML, CSS, Javascript, React JS, and other modern web technologies.
           </p>
