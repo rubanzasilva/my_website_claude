@@ -74,9 +74,9 @@ const About = () => {
             <li>• Deployment, Testing, and Monitoring</li>
           </ul>
           <p className="text-gray-300 leading-relaxed mt-4">
-            I am proficient with Python, PyTorch, and many other libraries such as fastaSi and 
-            sklearn. Additionally, I have over 6 years of experience developing software 
-            applications using HTML, CSS, Javascript, React JS, and other modern web technologies.
+            I am proficient with Python, PyTorch, and many other libraries such as the fastai and 
+            sklearn libraries. Additionally, I as well have over 9 years of experience developing software 
+            applications using HTML, CSS, Javascript, React, Next JS, and other modern web technologies.
           </p>
         </div>
       </div>
