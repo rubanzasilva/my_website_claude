@@ -6,9 +6,9 @@ const Projects = () => {
     {
       id: 'modal-deployment',
       title: 'ML model deployment with Modal',
-      description: 'Serving and deploying a sticker sales forecasting machine learning model using Modal',
+      description: 'Serving and deploying a sticker sales forecasting machine learning model using Modal.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/ss.png',
-      category: 'ML/AI model serving and deployment',
+      category: 'ML/AI Serving & Deployment',
       links: {
         article: 'https://sticker-sales.flexiblefunctions.com/'
       },
@@ -17,9 +17,9 @@ const Projects = () => {
     {
       id: 'bentoml-deployment',
       title: 'ML model deployment with BentoML',
-      description: 'Serving and deploying a binary classification machine learning model using BentoML',
+      description: 'Serving and deploying a binary classification machine learning model using BentoML.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/dalle_deployment.webp',
-      category: 'ML/AI model serving and deployment',
+      category: 'ML/AI Serving & Deployment',
       links: {
         article: 'https://nbsanity.com/static/64b506b80020adafd31defb4d6afb508/load.html'
       },
@@ -28,13 +28,24 @@ const Projects = () => {
     {
       id: 'medical-llm',
       title: 'Building an AI medical assistant',
-      description: 'Building an AI system for assisted differential diagnosis based on the Uganda Clinical Guidelines',
+      description: 'An AI system for assisted differential diagnosis based on the Uganda Clinical Guidelines.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/symtd.webp',
-      category: 'AI in healthcare',
+      category: 'AI in Healthcare',
       links: {
         article: 'https://fsdp-qdora-ucg.flexiblefunctions.com/'
       },
-      tags: ['AI in healthcare', 'Machine Learning', 'medical-llm']
+      tags: ['AI in Healthcare', 'Machine Learning', 'Medical-LLM']
+    },
+    {
+      id: 'sd-1',
+      title: 'Stable Diffusion from the Foundations',
+      description: 'Comprehensive walkthrough of Stable Diffusion, starting from the theoretical foundations and building up to a complete implementation.',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/stable-diffusion-ph.webp',
+      category: 'Machine Learning',
+      links: {
+        article: 'https://stable-diffusion-1.flexiblefunctions.com',
+      },
+      tags: ['Stable Diffusion', 'Generative AI', 'AI Art']
     },
     {
       id: 'academic-success',
@@ -51,7 +62,7 @@ const Projects = () => {
     {
       id: 'used-cars',
       title: 'Regression - Prediction of Used Car Prices',
-      description: 'A regression model to predict the price of used cars based on various attributes',
+      description: 'A regression model to predict the price of used cars based on various attributes.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/used_cars.jpg',
       category: 'Machine Learning',
       links: {
@@ -61,21 +72,9 @@ const Projects = () => {
       tags: ['Regression', 'FastAI', 'EDA', 'Automotive']
     },
     {
-      id: 'sd-1',
-      title: 'Stable Diffusion from the Foundations',
-      description: 'Comprehensive walkthrough of Stable Diffusion, starting from the theoretical foundations and building up to a complete implementation.',
-      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/stable-diffusion-ph.webp',
-      category: 'Machine Learning',
-      links: {
-        article: 'https://stable-diffusion-1.flexiblefunctions.com',
-      },
-      tags: ['Stable Diffusion', 'Generative AI', 'AI Art']
-    },
-    
-    {
       id: 'mushroom-classification',
       title: 'Binary Prediction of Poisonous Mushrooms',
-      description: 'A classification model to predict whether a mushroom is edible or poisonous based on its physical characteristics.',
+      description: 'A classification model to predict whether a mushroom is edible or poisonous from its physical characteristics.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/mushroomAnatomy.jpg',
       category: 'Machine Learning',
       links: {
@@ -97,7 +96,7 @@ const Projects = () => {
     {
       id: 'antelope-classifier',
       title: 'Antelope Classifier',
-      description: 'After training a machine learning model you need to deploy it to show potential stakeholders what the results would look like with a decent UI, not jupyter notebooks to achieve any sort of buyback from the people/business that potentially want and can pay for this type of service.',
+      description: 'A trained model deployed with a clean UI so stakeholders can see real results — not notebooks — and evaluate the work.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/antelopes.jpeg',
       category: 'Computer Vision',
       links: {
@@ -108,19 +107,19 @@ const Projects = () => {
     },
     {
       id: 'ff',
-      title: 'Flexible Functions Website',
-      description: 'Flexible functions AI is an AI lab that is building practical AI use cases in the most cost effective way possible.',
+      title: 'Flexible Functions',
+      description: 'An AI lab building practical AI use cases in the most cost-effective way possible.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/ff_logo.webp',
       category: 'Artificial Intelligence',
       links: {
         demo: 'https://www.flexiblefunctions.com/'
       },
-      tags: ['AI', 'Machine learning', 'Dataset']
+      tags: ['AI', 'Machine Learning', 'Dataset']
     },
     {
       id: 'zicofe',
       title: 'Zigoti Coffee Website',
-      description: 'Zigoti Coffee is a Ugandan coffee house that covers the whole value chain from growing, buying, processing, roasting, and export of Ugandan Coffee beans.',
+      description: 'A Ugandan coffee house covering the whole value chain — growing, buying, processing, roasting, and export of coffee beans.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/ZICOFE.JPG',
       category: 'Web Development',
       links: {
@@ -131,7 +130,7 @@ const Projects = () => {
     {
       id: 'suwik',
       title: 'Suwik Investments Website',
-      description: 'Suwik aims to be the leading exporter of the freshest, highest quality agricultural products with guaranteed customer satisfaction',
+      description: 'Suwik aims to be the leading exporter of the freshest, highest-quality agricultural products with guaranteed customer satisfaction.',
       image: 'https://d322abd807wvow.cloudfront.net/suwik-photos/suwikLogo.jpeg',
       category: 'Web Development',
       links: {
@@ -143,22 +142,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-primary to-secondary/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            My Projects
+    <section id="projects" className="pt-24 pb-24">
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto">
+          <h2 className="font-heading font-[900] text-[48px] leading-[46px] text-ploy-text-primary mb-4">
+            Selected work
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-blue-400 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            A selection of my recent work in machine learning, data science, and web development.
+          <p className="text-[18px] leading-[29px] text-ploy-text-secondary max-w-2xl mb-12">
+            A selection of recent work across machine learning, data science, and web development.
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

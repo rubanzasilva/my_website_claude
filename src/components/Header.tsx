@@ -23,12 +23,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center py-5 max-w-7xl mx-auto">
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center py-5">
           <button
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-xl font-bold tracking-tight cursor-pointer"
-            style={{ color: 'var(--foreground)' }}
+            className="font-heading text-xl font-bold text-ploy-text-primary tracking-tight cursor-pointer"
           >
             Silver Rubanza
           </button>
@@ -39,7 +38,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item)}
-                className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer uppercase tracking-wider"
+                className="font-eyebrow text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors cursor-pointer uppercase tracking-wider"
               >
                 {item.name}
               </button>
@@ -51,7 +50,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-black dark:bg-white text-white dark:text-black text-sm px-5 py-2.5 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer"
+              className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
             >
               Work with me
             </button>
@@ -62,8 +61,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 cursor-pointer"
-              style={{ color: 'var(--foreground)' }}
+              className="p-2 cursor-pointer text-ploy-text-primary"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,13 +71,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800" style={{ backgroundColor: 'var(--background)' }}>
+          <nav className="md:hidden py-4 border-t border-ploy-border-primary bg-ploy-background-primary">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-left uppercase tracking-wider cursor-pointer"
+                  className="text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors text-left uppercase tracking-wider cursor-pointer"
                 >
                   {item.name}
                 </button>
@@ -89,7 +87,7 @@ const Header = () => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   setIsOpen(false);
                 }}
-                className="bg-black dark:bg-white text-white dark:text-black text-sm px-5 py-2.5 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors w-fit cursor-pointer"
+                className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity w-fit cursor-pointer"
               >
                 Work with me
               </button>

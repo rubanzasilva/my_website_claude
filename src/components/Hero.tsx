@@ -8,72 +8,63 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="h-screen flex flex-col justify-center pt-20">
-      <div className="container mx-auto px-6 lg:px-12 flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto w-full">
-
-          {/* Left Column - Content */}
-          <div className="order-2 lg:order-1">
-            <h1
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] mb-6 tracking-tight"
-              style={{ color: 'var(--foreground)' }}
-            >
-              I build<br />
-              production-ready<br />
-              ML systems,<br />
-              end to end.
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-28 pb-16"
+    >
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto grid items-center grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16">
+          {/* Left: message */}
+          <div className="max-lg:order-2 max-lg:text-center lg:text-left">
+            <h1 className="font-heading font-black text-ploy-text-primary tracking-tight max-md:text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-balance">
+              I build production-ready ML systems, end to end.
             </h1>
-
-            <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-lg leading-relaxed">
-              Machine learning engineer and software developer with 7+ years across the ML lifecycle — data analysis, modeling, deployment, and monitoring, wired into real software.
+            <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
+              Machine learning engineer and software developer with 7+ years across the ML lifecycle. Data analysis, modeling, deployment, and monitoring, wired into real software.
             </p>
 
-            <div className="flex items-center gap-6 mb-8">
+            <div className="mt-9 flex items-center gap-5 max-lg:justify-center">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-black dark:bg-white text-white dark:text-black px-6 py-3.5 rounded-full flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors text-sm font-medium cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
               >
-                Work with me <ArrowRight size={16} />
+                Work with me
+                <ArrowRight size={18} />
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="underline underline-offset-4 font-medium text-sm hover:opacity-70 transition-opacity cursor-pointer"
-                style={{ color: 'var(--foreground)' }}
+                className="text-base font-medium text-ploy-text-primary underline decoration-ploy-accent-primary decoration-2 underline-offset-4 transition-opacity hover:opacity-70 cursor-pointer"
               >
                 View my work
               </button>
             </div>
 
-            {/* Tech stack bar */}
-            <div className="text-[11px] text-gray-400 uppercase tracking-widest font-mono">
-              PyTorch · FastAI · BentoML · Modal · React — Available for freelance & contract work
-            </div>
+            <p className="mt-8 font-eyebrow text-xs uppercase tracking-[0.08em] text-ploy-text-secondary max-w-md max-lg:mx-auto">
+              PyTorch · FastAI · BentoML · Modal · React — available for freelance & contract work
+            </p>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Purple border frame */}
-              <div className="relative w-64 h-72 sm:w-72 sm:h-80 lg:w-80 lg:h-[22rem] xl:w-[22rem] xl:h-[26rem]">
-                <div className="absolute inset-0 rounded-2xl border-[6px] border-purple-200 dark:border-purple-800 rotate-2"></div>
-                <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                  <Image
-                    src="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/silverPotraitCompressed.webp"
-                    alt="Silver Rubanza"
-                    fill
-                    className="object-cover object-[center_5%]"
-                    priority
-                  />
-                </div>
-                {/* Yellow accent dot */}
-                <div className="absolute -top-2 -right-2 w-7 h-7 bg-[#d4e926] rounded-full"></div>
+          {/* Right: portrait cluster */}
+          <div className="max-lg:order-1 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute -inset-4 rounded-[2rem] bg-ploy-accent-secondary/60 rotate-3" />
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-ploy-border-primary bg-ploy-neutral-primary-s0 -rotate-2 shadow-sm">
+                <Image
+                  alt="Silver Rubanza"
+                  src="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/silverPotraitCompressed.webp"
+                  width={480}
+                  height={520}
+                  className="w-full h-[24rem] object-cover object-[50%_10%]"
+                  priority
+                />
               </div>
-
-              {/* Available badge */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 rounded-full px-4 py-2 shadow-lg flex items-center gap-2">
-                <div className="w-2.5 h-2.5 bg-[#d4e926] rounded-full"></div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-gray-700 dark:text-gray-300 whitespace-nowrap">Available for work</span>
+              <div className="absolute -bottom-5 -left-5 rounded-2xl bg-ploy-neutral-primary-s0 border border-ploy-border-primary px-4 py-3 shadow-sm rotate-2">
+                <span className="flex items-center gap-2 font-eyebrow text-xs uppercase tracking-[0.08em] text-ploy-text-primary">
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-ploy-accent-primary" />
+                  Available for work
+                </span>
               </div>
+              <div className="absolute -top-6 -right-3 h-14 w-14 rounded-full bg-ploy-accent-primary" />
             </div>
           </div>
         </div>
