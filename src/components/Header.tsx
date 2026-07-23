@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail, FileText } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
@@ -45,9 +45,24 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side: theme toggle + CTA */}
+          {/* Right side: theme toggle + resume + mail + CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
+            <a
+              href="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-eyebrow text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+            >
+              Resume
+            </a>
+            <a
+              href="mailto:abc@silverrubanza.com"
+              className="text-ploy-text-secondary hover:text-ploy-text-primary transition-colors"
+              aria-label="Email me"
+            >
+              <Mail size={18} />
+            </a>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
@@ -82,6 +97,21 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
+              <a
+                href="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+              >
+                Resume
+              </a>
+              <a
+                href="mailto:abc@silverrubanza.com"
+                className="flex items-center gap-2 text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+              >
+                <Mail size={16} />
+                Email me
+              </a>
               <button
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
