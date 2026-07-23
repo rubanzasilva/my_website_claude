@@ -1,9 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { Send, Globe } from 'lucide-react';
-import { MdEmail } from 'react-icons/md';
+import { Send, MapPin, ArrowUpRight } from 'lucide-react';
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-import KaggleIcon from './icons/KaggleIcon';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +13,6 @@ const Footer = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Message sent! Thank you for reaching out.');
     setFormData({ name: '', email: '', subject: '', message: '' });
@@ -28,129 +25,124 @@ const Footer = () => {
     });
   };
 
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer id="contact" className="bg-secondary/10 border-t border-secondary/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Get In Touch</h3>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a question or want to work together? Feel free to reach out!
-          </p>
-        </div>
+    <footer id="contact" className="pb-8">
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto">
+          {/* Dark panel with rounded top */}
+          <div className="bg-ploy-neutral-inverse rounded-[2rem] p-8 md:p-14">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+              {/* Left: heading + info */}
+              <div>
+                <h2 className="font-heading font-black text-white max-md:text-4xl md:text-5xl leading-[0.95] tracking-tight">
+                  Let&rsquo;s work together
+                </h2>
+                <p className="mt-5 text-lg text-gray-400 leading-relaxed">
+                  Have an ML system to build, deploy, or improve?<br />
+                  Send a note and I&rsquo;ll get back to you.
+                </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <div className="bg-secondary/10 rounded-lg p-8">
-            <h4 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Send Me a Message</h4>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-gray-600 dark:text-gray-300 mb-2">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 bg-primary/50 border border-secondary/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 dark:text-gray-300 mb-2">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="john@example.com"
-                  className="w-full px-4 py-3 bg-primary/50 border border-secondary/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 dark:text-gray-300 mb-2">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Project Inquiry"
-                  className="w-full px-4 py-3 bg-primary/50 border border-secondary/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your message here..."
-                  rows={5}
-                  className="w-full px-4 py-3 bg-primary/50 border border-secondary/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent resize-none"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-accent hover:bg-accent/80 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <Send size={20} />
-                <span>Send Message</span>
-              </button>
-            </form>
-          </div>
+                <div className="mt-8 flex items-center gap-2 text-gray-400">
+                  <MapPin size={16} />
+                  <span className="text-sm">Kampala, Uganda — available worldwide</span>
+                </div>
 
-          {/* Contact Information */}
-          <div className="bg-secondary/10 rounded-lg p-8">
-            <h4 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Contact Information</h4>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3">
-                <MdEmail className="w-5 h-5 text-accent" />
-                <div>
-                  <p className="text-gray-800 dark:text-white font-medium">Email</p>
-                  <p className="text-gray-600 dark:text-gray-300">abc@silverrubanza.com</p>
+                <div className="mt-8 flex items-center gap-4">
+                  <a
+                    href="https://www.linkedin.com/in/silver-rubanza/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
+                  >
+                    <FaLinkedin size={18} />
+                  </a>
+                  <a
+                    href="https://x.com/rubanzasil/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
+                  >
+                    <FaTwitter size={18} />
+                  </a>
+                  <a
+                    href="https://github.com/rubanzasilva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
+                  >
+                    <FaGithub size={18} />
+                  </a>
+                  <a
+                    href="https://www.kaggle.com/rubanzasilva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-400 border border-gray-600 rounded-full px-4 py-2 hover:text-white hover:border-gray-400 transition-colors"
+                  >
+                    Kaggle
+                    <ArrowUpRight size={14} />
+                  </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Globe className="w-5 h-5 text-accent" />
-                <div>
-                  <p className="text-gray-800 dark:text-white font-medium">Location</p>
-                  <p className="text-gray-600 dark:text-gray-300">Kampala, Uganda</p>
-                </div>
+
+              {/* Right: form */}
+              <div className="bg-white rounded-2xl p-8">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your name"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Your email"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                      required
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Subject"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your message"
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 resize-none"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-black text-white font-medium py-3.5 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                  >
+                    <Send size={16} />
+                    Send message
+                  </button>
+                </form>
               </div>
             </div>
 
-            <div>
-              <h5 className="text-gray-800 dark:text-white font-medium mb-4">Connect With Me</h5>
-              <div className="flex items-center space-x-4">
-                <a href="mailto:abc@silverrubanza.com" className="gradient-text hover:opacity-75 transition-opacity">
-                  <MdEmail size={24} />
-                </a>
-                <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-                  <FaLinkedin size={24} />
-                </a>
-                <a href="https://x.com/rubanzasil/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-                  <FaTwitter size={24} />
-                </a>
-                <a href="https://github.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-                  <FaGithub size={24} />
-                </a>
-                <a href="https://www.kaggle.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-                  <KaggleIcon size={24} />
-                </a>
-              </div>
+            {/* Copyright */}
+            <div className="border-t border-gray-700 mt-14 pt-8">
+              <p className="font-eyebrow text-[11px] uppercase tracking-wider text-gray-500">
+                © 2026 Silver Rubanza. All rights reserved.
+              </p>
             </div>
           </div>
-        </div>
-
-        <div className="border-t border-secondary/20 pt-8 mt-12 text-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {currentYear} Silver Rubanza. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

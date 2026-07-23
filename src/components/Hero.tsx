@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,61 +8,66 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 ">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-          
-          {/* Left Column - Content */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light mb-6">
-              Hi, I am <span className="gradient-text font-semibold">Silver Rubanza</span>
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-28 pb-16"
+    >
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto grid items-center grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16">
+          {/* Left: message */}
+          <div className="max-lg:order-2 max-lg:text-center lg:text-left">
+            <h1 className="font-heading font-black text-ploy-text-primary tracking-tight max-md:text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-balance">
+              I build production-ready ML systems, end to end.
             </h1>
-            
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 dark:text-gray-300 mb-8 leading-relaxed">
-             A machine learning engineer and software developer.  I build end-to-end production-ready Machine learning systems. 
-             I can work and collaborate across any part of the machine learning pipeline, especially model development, testing, and deployment.
+            <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
+              Machine learning engineer and software developer with 7+ years across the ML lifecycle. Data analysis, modeling, deployment, and monitoring, wired into real software.
             </p>
 
+            <div className="mt-9 flex items-center gap-5 max-lg:justify-center">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
+              >
+                Work with me
+                <ArrowRight size={18} />
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-base font-medium text-ploy-text-primary underline decoration-ploy-accent-primary decoration-2 underline-offset-4 transition-opacity hover:opacity-70 cursor-pointer"
+              >
+                View my work
+              </button>
+            </div>
+
+            <p className="mt-8 font-eyebrow text-xs uppercase tracking-[0.08em] text-ploy-text-secondary max-w-md max-lg:mx-auto">
+              PyTorch · FastAI · BentoML · Modal · React — available for freelance & contract work
+            </p>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-blue-400 p-1">
-                <div className="w-full h-full rounded-full overflow-hidden bg-primary">
-                  <Image
-                    src="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/silverPotraitCompressed.webp"
-                    alt="Silver Rubanza"
-                    width={384}
-                    height={384}
-                    className="w-full h-full object-cover object-[center_5%]"
-                    priority
-                  />
-                </div>
+          {/* Right: portrait cluster */}
+          <div className="max-lg:order-1 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute -inset-4 rounded-[2rem] bg-ploy-accent-secondary/60 rotate-3" />
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-ploy-border-primary bg-ploy-neutral-primary-s0 -rotate-2 shadow-sm">
+                <Image
+                  alt="Silver Rubanza"
+                  src="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/silverPotraitCompressed.webp"
+                  width={480}
+                  height={520}
+                  className="w-full h-[24rem] object-cover object-[50%_10%]"
+                  priority
+                />
               </div>
+              <div className="absolute -bottom-5 -left-5 rounded-2xl bg-ploy-neutral-primary-s0 border border-ploy-border-primary px-4 py-3 shadow-sm rotate-2">
+                <span className="flex items-center gap-2 font-eyebrow text-xs uppercase tracking-[0.08em] text-ploy-text-primary">
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-ploy-accent-primary" />
+                  Available for work
+                </span>
+              </div>
+              <div className="absolute -top-6 -right-3 h-14 w-14 rounded-full bg-ploy-accent-primary" />
             </div>
           </div>
         </div>
-
-        {/* Centered CTA button with drop down effect */}
-        {/*<div className="absolute bottom-8 sm:bottom-6 md:bottom-4 lg:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button 
-            onClick={() => scrollToSection('projects')}
-            className="text-accent hover:text-black dark:hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
-          >
-            <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
-            <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
-          </button>
-        </div>*/}
-        <div className="hidden md:block absolute bottom-12 sm:bottom-8 md:bottom-6 lg:bottom-4 xl:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
-  <button 
-    onClick={() => scrollToSection('projects')}
-    className="text-accent hover:text-black dark:hover:text-white transition-all duration-300 flex flex-col items-center gap-2 group"
-  >
-    <span className="text-lg font-medium group-hover:scale-105 transition-transform">View My Projects</span>
-    <ChevronDown className="w-8 h-8 group-hover:translate-y-1 transition-transform" />
-  </button>
-</div>
       </div>
     </section>
   );

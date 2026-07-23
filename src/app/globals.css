@@ -1,40 +1,271 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-:root.light {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-}
-
-:root.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-ploy-neutral-primary: var(--ploy-neutral-primary);
+  --color-ploy-neutral-secondary: var(--ploy-neutral-secondary);
+  --color-ploy-neutral-inverse: var(--ploy-neutral-inverse);
+  --color-ploy-neutral-light: var(--ploy-neutral-light);
+  --color-ploy-neutral-dark: var(--ploy-neutral-dark);
+  --color-ploy-neutral-primary-s0: var(--ploy-neutral-primary-s0);
+  --color-ploy-neutral-primary-s1: var(--ploy-neutral-primary-s1);
+  --color-ploy-neutral-primary-s2: var(--ploy-neutral-primary-s2);
+  --color-ploy-neutral-primary-s3: var(--ploy-neutral-primary-s3);
+  --color-ploy-neutral-primary-s4: var(--ploy-neutral-primary-s4);
+  --color-ploy-neutral-primary-s5: var(--ploy-neutral-primary-s5);
+  --color-ploy-neutral-inverse-s0: var(--ploy-neutral-inverse-s0);
+  --color-ploy-neutral-inverse-s1: var(--ploy-neutral-inverse-s1);
+  --color-ploy-neutral-inverse-s2: var(--ploy-neutral-inverse-s2);
+  --color-ploy-neutral-inverse-s3: var(--ploy-neutral-inverse-s3);
+  --color-ploy-neutral-inverse-s4: var(--ploy-neutral-inverse-s4);
+  --color-ploy-neutral-inverse-s5: var(--ploy-neutral-inverse-s5);
+  --color-ploy-accent-primary: var(--ploy-accent-primary);
+  --color-ploy-accent-secondary: var(--ploy-accent-secondary);
+  --color-ploy-accent-tertiary: var(--ploy-accent-tertiary);
+  --color-ploy-text-primary: var(--ploy-text-primary);
+  --color-ploy-text-secondary: var(--ploy-text-secondary);
+  --color-ploy-text-inverse: var(--ploy-text-inverse);
+  --color-ploy-text-inverse-secondary: var(--ploy-text-inverse-secondary);
+  --color-ploy-text-on-accent-primary: var(--ploy-text-on-accent-primary);
+  --color-ploy-text-on-accent-secondary: var(--ploy-text-on-accent-secondary);
+  --color-ploy-text-on-accent-tertiary: var(--ploy-text-on-accent-tertiary);
+  --color-ploy-button-primary-background: var(--ploy-button-primary-background);
+  --color-ploy-button-primary-text: var(--ploy-button-primary-text);
+  --color-ploy-button-primary-border: var(--ploy-button-primary-border);
+  --color-ploy-button-secondary-background: var(--ploy-button-secondary-background);
+  --color-ploy-button-secondary-text: var(--ploy-button-secondary-text);
+  --color-ploy-button-secondary-border: var(--ploy-button-secondary-border);
+  --color-ploy-background-primary: var(--ploy-background-primary);
+  --color-ploy-background-secondary: var(--ploy-background-secondary);
+  --color-ploy-background-accent-primary: var(--ploy-background-accent-primary);
+  --color-ploy-background-accent-secondary: var(--ploy-background-accent-secondary);
+  --color-ploy-background-accent-tertiary: var(--ploy-background-accent-tertiary);
+  --color-ploy-background-inverse: var(--ploy-background-inverse);
+  --color-ploy-border-primary: var(--ploy-border-primary);
+  --color-ploy-border-inverse: var(--ploy-border-inverse);
+  --color-ploy-input-background: var(--ploy-input-background);
+  --color-ploy-input-border: var(--ploy-input-border);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Fonts */
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+  --font-eyebrow: var(--font-eyebrow, var(--font-body));
+  --font-button: var(--font-button, var(--font-body));
+
+  /* Font size scale */
+  --text-xs: var(--font-size-xs, 0.75rem);
+  --text-sm: var(--font-size-sm, 0.875rem);
+  --text-base: var(--font-size-base, 1rem);
+  --text-lg: var(--font-size-lg, 1.125rem);
+  --text-xl: var(--font-size-xl, 1.25rem);
+  --text-2xl: var(--font-size-2xl, 1.5rem);
+  --text-3xl: var(--font-size-3xl, 1.875rem);
+  --text-4xl: var(--font-size-4xl, 2.25rem);
+  --text-5xl: var(--font-size-5xl, 3rem);
+  --text-6xl: var(--font-size-6xl, 3.75rem);
+  --text-7xl: var(--font-size-7xl, 4.5rem);
+  --text-8xl: var(--font-size-8xl, 6rem);
+  --text-9xl: var(--font-size-9xl, 8rem);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 14px;
+  --ploy-neutral-primary: oklch(0.992 0.004 106);
+  --ploy-neutral-secondary: oklch(0.955 0.006 106);
+  --ploy-neutral-inverse: oklch(0.145 0 0);
+  --ploy-neutral-light: oklch(1 0 0);
+  --ploy-neutral-dark: oklch(0.145 0 0);
+  --ploy-neutral-primary-s0: white;
+  --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
+  --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
+  --ploy-neutral-primary-s3: color-mix(in oklch, var(--ploy-neutral-primary) 95%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s4: color-mix(in oklch, var(--ploy-neutral-primary) 88%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s5: color-mix(in oklch, var(--ploy-neutral-primary) 76%, var(--ploy-neutral-inverse));
+  --ploy-neutral-inverse-s0: color-mix(in oklch, var(--ploy-neutral-inverse) 88%, black);
+  --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
+  --ploy-neutral-inverse-s2: color-mix(in oklch, var(--ploy-neutral-inverse) 84%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s3: color-mix(in oklch, var(--ploy-neutral-inverse) 66%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s4: color-mix(in oklch, var(--ploy-neutral-inverse) 48%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s5: color-mix(in oklch, var(--ploy-neutral-inverse) 30%, var(--ploy-neutral-primary));
+  --ploy-accent-primary: oklch(0.93 0.19 118);
+  --ploy-accent-secondary: oklch(0.84 0.07 300);
+  --ploy-accent-tertiary: oklch(1 0 0);
+  --ploy-text-primary: var(--ploy-neutral-inverse);
+  --ploy-text-secondary: var(--ploy-neutral-inverse-s3);
+  --ploy-text-inverse: var(--ploy-neutral-primary);
+  --ploy-text-inverse-secondary: color-mix(in srgb, var(--ploy-neutral-primary) 60%, transparent);
+  --ploy-text-on-accent-primary: oklch(0.2 0 0);
+  --ploy-text-on-accent-secondary: oklch(0.145 0 0);
+  --ploy-text-on-accent-tertiary: oklch(0.145 0 0);
+  --ploy-button-primary-background: oklch(0.205 0 0);
+  --ploy-button-primary-text: oklch(1 0 0);
+  --ploy-button-primary-border: oklch(0.205 0 0);
+  --ploy-button-secondary-background: var(--ploy-background-primary);
+  --ploy-button-secondary-text: var(--ploy-background-inverse);
+  --ploy-button-secondary-border: var(--ploy-text-primary);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-inverse: color-mix(in srgb, var(--ploy-neutral-inverse-s0) 20%, transparent);
+  --ploy-input-background: var(--ploy-neutral-primary);
+  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --destructive: oklch(0.145 0 0);
+  --border: var(--ploy-border-primary);
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-secondary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: oklch(0.6 0.2 250);
+  --primary-foreground: var(--ploy-text-inverse);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: var(--ploy-background-primary);
+  --accent-foreground: var(--ploy-text-primary);
+  --input: var(--ploy-input-border);
+  --ring: oklch(0.6 0.2 250);
+
+  --font-heading: "Satoshi", "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-eyebrow: "IBM Plex Mono", ui-monospace, monospace;
+  --font-button: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
+  --ploy-neutral-primary: oklch(0 0 0);
+  --ploy-neutral-secondary: oklch(0.072 0.006 264.6);
+  --ploy-neutral-inverse: oklch(0.855 0 0);
+  --ploy-neutral-light: oklch(0.947 0 352.8);
+  --ploy-neutral-dark: oklch(0 0 0);
+  --ploy-neutral-primary-s0: color-mix(in oklch, var(--ploy-neutral-primary) 88%, black);
+  --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
+  --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
+  --ploy-neutral-primary-s3: color-mix(in oklch, var(--ploy-neutral-primary) 95%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s4: color-mix(in oklch, var(--ploy-neutral-primary) 88%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s5: color-mix(in oklch, var(--ploy-neutral-primary) 76%, var(--ploy-neutral-inverse));
+  --ploy-neutral-inverse-s0: color-mix(in oklch, var(--ploy-neutral-inverse) 88%, white);
+  --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
+  --ploy-neutral-inverse-s2: color-mix(in oklch, var(--ploy-neutral-inverse) 84%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s3: color-mix(in oklch, var(--ploy-neutral-inverse) 66%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s4: color-mix(in oklch, var(--ploy-neutral-inverse) 48%, var(--ploy-neutral-primary));
+  --ploy-neutral-inverse-s5: color-mix(in oklch, var(--ploy-neutral-inverse) 30%, var(--ploy-neutral-primary));
+  --ploy-accent-primary: oklch(0.4 0.2 250);
+  --ploy-accent-secondary: oklch(0 0 0);
+  --ploy-accent-tertiary: oklch(0 0 0);
+  --ploy-text-primary: var(--ploy-neutral-inverse-100);
+  --ploy-text-secondary: var(--ploy-neutral-inverse-700);
+  --ploy-text-inverse: var(--ploy-neutral-primary);
+  --ploy-text-inverse-secondary: color-mix(in srgb, var(--ploy-neutral-primary) 60%, transparent);
+  --ploy-text-on-accent-primary: oklch(0 0 0);
+  --ploy-text-on-accent-secondary: oklch(0.855 0 0);
+  --ploy-text-on-accent-tertiary: oklch(0.947 0 352.8);
+  --ploy-button-primary-background: oklch(0.4 0.2 250);
+  --ploy-button-primary-text: var(--ploy-background-inverse);
+  --ploy-button-primary-border: oklch(0.4 0.2 250);
+  --ploy-button-secondary-background: var(--ploy-background-primary);
+  --ploy-button-secondary-text: var(--ploy-background-inverse);
+  --ploy-button-secondary-border: var(--ploy-background-inverse);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-inverse: color-mix(in srgb, var(--ploy-neutral-inverse-s0) 20%, transparent);
+  --ploy-input-background: var(--ploy-neutral-primary);
+  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --destructive: oklch(0.855 0 0);
+  --border: var(--ploy-border-primary);
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-secondary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: oklch(0.4 0.2 250);
+  --primary-foreground: var(--ploy-text-inverse);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: var(--ploy-background-primary);
+  --accent-foreground: var(--ploy-text-primary);
+  --input: var(--ploy-input-border);
+  --ring: oklch(0.4 0.2 250);
+}
+
+.light {
+  color-scheme: light;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v18/UcCo3FwrK3iLTcviYwYZ90OcCqI.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("https://cdn.fontshare.com/wf/EKWWAYIKBFKEQRQXBCZ3UQFQE5GVSXPR/NRYUDPJ7ATRSMG6BJHMOPJD6DQ3VKY24/CJRQK7Y4ZHGMXLQQNHQHLEHIWUKEXIQE.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n5iQ.woff2") format("woff2");
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  color: var(--foreground);
+  body {
+    @apply bg-ploy-background-primary text-ploy-text-primary;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
 }

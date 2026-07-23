@@ -1,10 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { MdEmail } from 'react-icons/md';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { Menu, X, Mail, FileText } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import KaggleIcon from './icons/KaggleIcon';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,62 +16,67 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', href: 'home' },
+    { name: 'Work', href: 'projects' },
     { name: 'About', href: 'about' },
-    { name: 'Projects', href: 'projects' },
-    // { name: 'Skills', href: 'skills' },
-    // { name: 'Experience', href: 'experience' },
-    { name: 'Resume', href: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf', external: true },
     { name: 'Contact', href: 'contact' },
-    
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-sm border-b border-secondary/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 max-w-7xl mx-auto">
-          <div className="flex items-center space-x-4">
-            <a href="mailto:abc@silverrubanza.com" className="gradient-text hover:opacity-75 transition-opacity">
-              <MdEmail size={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/silver-rubanza/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-              <FaLinkedin size={24} />
-            </a>
-            <a href="https://x.com/rubanzasil/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-              <FaTwitter size={24} />
-            </a>
-            <a href="https://github.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-              <FaGithub size={24} />
-            </a>
-            <a href="https://www.kaggle.com/rubanzasilva" target="_blank" rel="noopener noreferrer" className="gradient-text hover:opacity-75 transition-opacity">
-              <KaggleIcon size={24} />
-            </a>
-          </div>
-          
+    <header className="fixed top-0 left-0 right-0 z-50 bg-ploy-background-primary/70 backdrop-blur-md">
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center py-5">
+          <button
+            onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+            className="font-heading text-xl font-bold text-ploy-text-primary tracking-tight cursor-pointer"
+          >
+            Silver Rubanza
+          </button>
+
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item)}
-                  className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
-                  /* className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer" */
-                >
-                  {item.name}
-                </button>
-              ))}
-            </nav>
+          <nav className="hidden md:flex items-center space-x-10">
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleNavClick(item)}
+                className="font-eyebrow text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors cursor-pointer uppercase tracking-wider"
+              >
+                {item.name}
+              </button>
+            ))}
+          </nav>
+
+          {/* Right side: theme toggle + resume + mail + CTA */}
+          <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
+            <a
+              href="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-eyebrow text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+            >
+              Resume
+            </a>
+            <a
+              href="mailto:abc@silverrubanza.com"
+              className="text-ploy-text-secondary hover:text-ploy-text-primary transition-colors"
+              aria-label="Email me"
+            >
+              <Mail size={18} />
+            </a>
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              Work with me
+            </button>
           </div>
 
-          {/* Mobile Menu Button and Theme Toggle */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              /*className="text-black dark:text-white p-2"*/
-              className="gradient-text hover:text-gray-800 dark:hover:text-white transition-colors cursor-pointer"
+              className="p-2 cursor-pointer text-ploy-text-primary"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,19 +86,41 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="md:hidden py-4 border-t border-secondary/20" style={{backgroundColor: 'var(--color-background)'}}>
+          <nav className="md:hidden py-4 border-t border-ploy-border-primary bg-ploy-background-primary">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item)}
-                  /*className="text-black dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors text-left"*/
-                  className="hover:opacity-75 transition-colors cursor-pointer text-left"
-                  style={{color: 'var(--color-foreground)'}}
+                  className="text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors text-left uppercase tracking-wider cursor-pointer"
                 >
                   {item.name}
                 </button>
               ))}
+              <a
+                href="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+              >
+                Resume
+              </a>
+              <a
+                href="mailto:abc@silverrubanza.com"
+                className="flex items-center gap-2 text-sm text-ploy-text-secondary hover:text-ploy-text-primary transition-colors uppercase tracking-wider"
+              >
+                <Mail size={16} />
+                Email me
+              </a>
+              <button
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsOpen(false);
+                }}
+                className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity w-fit cursor-pointer"
+              >
+                Work with me
+              </button>
             </div>
           </nav>
         )}

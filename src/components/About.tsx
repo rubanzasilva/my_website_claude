@@ -1,83 +1,67 @@
-import { Brain, Cog, Code, Globe } from 'lucide-react';
+type Stat = { value: string; label: string };
+
+const stats: Stat[] = [
+  { value: "7+ yrs", label: "Machine learning" },
+  { value: "9+ yrs", label: "Software development" },
+  { value: "Kaggle", label: "Competitions expert" },
+  { value: "HF", label: "Models on HuggingFace" },
+];
+
+const background: string[] = [
+  "Exploratory Data Analysis and Data Wrangling",
+  "Feature Engineering",
+  "Model Building and Evaluation",
+  "Deployment, Testing, and Monitoring",
+];
 
 const About = () => {
-  const skills = [
-    {
-      icon: <Brain className="w-8 h-8 text-accent" />,
-      title: "Machine Learning",
-      description: "Exploratory Data Analysis, Feature Engineering, Model Building"
-    },
-    {
-      icon: <Cog className="w-8 h-8 text-accent" />,
-      title: "ML Deployment", 
-      description: "Model deployment, testing, monitoring and integration into software solutions"
-    },
-    {
-      icon: <Code className="w-8 h-8 text-accent" />,
-      title: "Software Development",
-      description: "Python, PyTorch, fastai, sklearn, HTML, CSS, JavaScript, React"
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-accent" />,
-      title: "Web Development",
-      description: "Over 6 years of experience developing web applications with modern technologies"
-    }
-  ];
-
   return (
-    <section id="about" className="py-20 bg-secondary/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            About Me
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-blue-400 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            I possess over 7+ years of hands-on machine learning experience with expertise in building ML systems from the ground up.
-            I have deep knowledge of and can implement diverse architectures from scratch, 
-            ranging from gradient boosting and basic neural networks to sophisticated, large-scale neural networks that underpin today&rsquo;s generative AI technologies,
-            including image generation and the popular language language models
-          </p>
-        </div>
+    <section id="about" className="py-20 md:py-28">
+      <div className="w-full mx-auto max-md:px-4 md:max-lg:max-w-screen-md md:max-lg:px-6 lg:max-w-screen-2xl lg:px-8">
+        <div className="max-w-screen-xl mx-auto rounded-[2rem] bg-ploy-accent-secondary/40 border border-ploy-border-primary p-8 md:p-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-12">
+            <div>
+              <h2 className="font-heading font-black text-ploy-text-primary tracking-tight max-md:text-4xl md:text-5xl leading-[0.95] text-balance">
+                About me
+              </h2>
+              <p className="mt-6 text-lg text-ploy-text-primary leading-relaxed">
+                I possess over 7+ years of hands-on machine learning experience, building ML systems from the ground up. I can implement diverse architectures from scratch — from gradient boosting and basic neural networks to the large-scale networks behind today&rsquo;s generative AI, including image generation and large language models.
+              </p>
+              <p className="mt-4 text-lg text-ploy-text-secondary leading-relaxed">
+                I&rsquo;m proficient with Python, PyTorch, fastai, and sklearn, and have 9+ years building software applications with HTML, CSS, JavaScript, React, Next.js, and other modern web technologies.
+              </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {skills.map((skill, index) => (
-            <div 
-              key={index}
-              className="bg-secondary/20 rounded-lg p-6 hover:bg-secondary/30 transition-colors"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  {skill.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{skill.title}</h3>
-                  <p className="text-gray-300">{skill.description}</p>
-                </div>
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {stats.map((s) => (
+                  <div key={s.label}>
+                    <div className="font-heading font-black text-3xl text-ploy-text-primary">
+                      {s.value}
+                    </div>
+                    <div className="mt-1 font-eyebrow text-[0.7rem] uppercase tracking-[0.06em] text-ploy-text-secondary">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-16 bg-secondary/20 rounded-lg p-8 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-4">My Background</h3>
-          <p className="text-gray-300 leading-relaxed">
-            With a strong foundation in Software Engineering, I specialize in the 
-            intersection of machine learning and software development. My work encompasses 
-            various stages of the machine learning lifecycle:
-          </p>
-          <ul className="mt-4 gradient-text-300 space-y-2">
-          {/*<ul className="mt-4 text-gray-300 space-y-2">*/}
-            <li>• Exploratory Data Analysis and Data Wrangling</li>
-            <li>• Feature Engineering </li>
-            <li>• Model Building and Evaluation</li>
-            <li>• Deployment, Testing, and Monitoring</li>
-          </ul>
-          <p className="text-gray-300 leading-relaxed mt-4">
-            I am proficient with Python, PyTorch, and many other libraries such as the fastai and 
-            sklearn libraries. Additionally, I as well have over 9 years of experience developing software 
-            applications using HTML, CSS, Javascript, React, Next JS, and other modern web technologies.
-          </p>
+            <div className="rounded-[1.5rem] bg-ploy-neutral-primary-s0 border border-ploy-border-primary p-8">
+              <h3 className="font-heading font-bold text-2xl text-ploy-text-primary">
+                My background
+              </h3>
+              <p className="mt-3 text-ploy-text-secondary leading-relaxed">
+                A strong foundation in software engineering, working across every stage of the machine learning lifecycle:
+              </p>
+              <ul className="mt-5 space-y-3">
+                {background.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-ploy-text-primary">
+                    <span className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-ploy-accent-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
