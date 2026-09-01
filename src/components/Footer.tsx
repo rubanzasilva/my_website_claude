@@ -85,7 +85,7 @@ const Footer = () => {
               </div>
 
               {/* Right: form */}
-              <div className="bg-white rounded-2xl p-8">
+              <div className="bg-white dark:bg-ploy-neutral-secondary rounded-2xl p-8">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
@@ -94,7 +94,7 @@ const Footer = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
                       required
                     />
                     <input
@@ -103,7 +103,7 @@ const Footer = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Your email"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
                       required
                     />
                   </div>
@@ -113,7 +113,7 @@ const Footer = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Subject"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
                     required
                   />
                   <textarea
@@ -122,12 +122,12 @@ const Footer = () => {
                     onChange={handleChange}
                     placeholder="Your message"
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 resize-none"
+                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500 resize-none"
                     required
                   />
                   <button
                     type="submit"
-                    className="w-full bg-black text-white font-medium py-3.5 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                    className="w-full bg-black dark:bg-white text-white dark:text-black font-medium py-3.5 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer"
                   >
                     <Send size={16} />
                     Send message

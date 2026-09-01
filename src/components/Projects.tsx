@@ -15,6 +15,17 @@ const Projects = () => {
       tags: ['Modal', 'Sales Forecasting', 'Deployment', 'FastAI']
     },
     {
+      id: 'matmul',
+      title: 'Matrix Multiplication from scratch',
+      description: 'Doing Matrix Multiplication from scratch (using just python , its standard library, matplotlib) in Solveit.',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/matmul.png',
+      category: 'Python Development',
+      links: {
+        article: 'https://share.solveit.pub/d/067cca734a432d5446798dae58863b90'
+      },
+      tags: ['Python', 'First Principles', 'Solveit']
+    },
+    {
       id: 'bentoml-deployment',
       title: 'ML model deployment with BentoML',
       description: 'Serving and deploying a binary classification machine learning model using BentoML.',

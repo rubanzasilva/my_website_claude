@@ -169,9 +169,9 @@
   --ploy-neutral-primary-s0: color-mix(in oklch, var(--ploy-neutral-primary) 88%, black);
   --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
   --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
-  --ploy-neutral-primary-s3: color-mix(in oklch, var(--ploy-neutral-primary) 95%, var(--ploy-neutral-inverse));
-  --ploy-neutral-primary-s4: color-mix(in oklch, var(--ploy-neutral-primary) 88%, var(--ploy-neutral-inverse));
-  --ploy-neutral-primary-s5: color-mix(in oklch, var(--ploy-neutral-primary) 76%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s3: color-mix(in oklch, var(--ploy-neutral-primary) 88%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s4: color-mix(in oklch, var(--ploy-neutral-primary) 80%, var(--ploy-neutral-inverse));
+  --ploy-neutral-primary-s5: color-mix(in oklch, var(--ploy-neutral-primary) 68%, var(--ploy-neutral-inverse));
   --ploy-neutral-inverse-s0: color-mix(in oklch, var(--ploy-neutral-inverse) 88%, white);
   --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
   --ploy-neutral-inverse-s2: color-mix(in oklch, var(--ploy-neutral-inverse) 84%, var(--ploy-neutral-primary));
@@ -200,10 +200,10 @@
   --ploy-background-accent-secondary: var(--ploy-accent-secondary);
   --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
   --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
-  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-primary: oklch(0.25 0 0);
   --ploy-border-inverse: color-mix(in srgb, var(--ploy-neutral-inverse-s0) 20%, transparent);
-  --ploy-input-background: var(--ploy-neutral-primary);
-  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --ploy-input-background: var(--ploy-neutral-secondary);
+  --ploy-input-border: oklch(0.3 0 0);
   --destructive: oklch(0.855 0 0);
   --border: var(--ploy-border-primary);
   --background: var(--ploy-background-primary);
