@@ -16,12 +16,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>('light')
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light')
 
-  const setTheme = (nextTheme: Theme) => {
-    if (nextTheme === 'light') {
-      setThemeState('light')
-      return
-    }
-
+  const setTheme = (_nextTheme: Theme) => {
     setThemeState('light')
   }
 
