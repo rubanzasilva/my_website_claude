@@ -20,7 +20,7 @@ const Hero = () => {
               I build production-ready ML systems, end to end.
             </h1>
             <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
-              Machine learning engineer and software developer with 7+ years across the ML lifecycle. Problem scoping, Data engineering, Building models, serving, deploying, and monitoring them.
+              Machine learning engineer and software developer with 7+ years across the ML lifecycle—from problem scoping and data engineering to building, serving, deploying, and monitoring models.
             </p>
 
             <div className="mt-9 flex items-center gap-5 max-lg:justify-center">
