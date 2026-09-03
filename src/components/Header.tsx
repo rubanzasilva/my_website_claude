@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Mail, FileText } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+import { Menu, X, Mail } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,9 +44,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side: theme toggle + resume + mail + CTA */}
+          {/* Right side: resume + mail + CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
             <a
               href="https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/Silver_Rubanza_MLE.pdf"
               target="_blank"
@@ -73,7 +71,6 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 cursor-pointer text-ploy-text-primary"
