@@ -13,46 +13,34 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('system')
-  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('dark')
+  const [theme, setThemeState] = useState<Theme>('light')
+  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light')
+
+  const setTheme = (nextTheme: Theme) => {
+    if (nextTheme === 'light') {
+      setThemeState('light')
+      return
+    }
+
+    setThemeState('light')
+  }
 
   useEffect(() => {
     const stored = localStorage.getItem('theme') as Theme | null
-    if (stored) {
-      setTheme(stored)
+    if (stored && stored !== 'dark' && stored !== 'system') {
+      setThemeState('light')
+      return
     }
+
+    setThemeState('light')
   }, [])
 
   useEffect(() => {
     const root = window.document.documentElement
     root.classList.remove('light', 'dark')
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      root.classList.add(systemTheme)
-      setActualTheme(systemTheme)
-    } else {
-      root.classList.add(theme)
-      setActualTheme(theme)
-    }
-
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = () => {
-      if (theme === 'system') {
-        const systemTheme = mediaQuery.matches ? 'dark' : 'light'
-        const root = window.document.documentElement
-        root.classList.remove('light', 'dark')
-        root.classList.add(systemTheme)
-        setActualTheme(systemTheme)
-      }
-    }
-
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange)
+    root.classList.add('light')
+    setActualTheme('light')
+    localStorage.setItem('theme', 'light')
   }, [theme])
 
   return (
