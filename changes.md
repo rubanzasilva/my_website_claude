@@ -91,3 +91,104 @@ After:
 
 ### Notes
 This change only affects the visible UI control. The underlying theme logic remains in place in the project, but it is no longer exposed to users through the header.
+
+## Forced the site to light mode only
+
+Date: 2026-09-03
+
+### Summary
+The app was updated to force the site to always render in light mode while disabling dark-mode behavior entirely, since the dark theme is currently causing rendering issues.
+
+### Updated file
+- `src/components/ThemeProvider.tsx`
+
+### What changed
+- Defaulted the application theme to `light`.
+- Removed dark-mode class switching from the root HTML element.
+- Ensured `localStorage` is set to `'light'` and not persisted as dark/system.
+- Prevented dark or system theme selections from being applied.
+
+### Side-by-side code change
+
+Before:
+```tsx
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>('system')
+  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('dark')
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme') as Theme | null
+    if (stored) {
+      setTheme(stored)
+    }
+  }, [])
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.classList.remove('light', 'dark')
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      root.classList.add(systemTheme)
+      setActualTheme(systemTheme)
+    } else {
+      root.classList.add(theme)
+      setActualTheme(theme)
+    }
+
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = () => {
+      if (theme === 'system') {
+        const systemTheme = mediaQuery.matches ? 'dark' : 'light'
+        const root = window.document.documentElement
+        root.classList.remove('light', 'dark')
+        root.classList.add(systemTheme)
+        setActualTheme(systemTheme)
+      }
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [theme])
+```
+
+After:
+```tsx
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setThemeState] = useState<Theme>('light')
+  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light')
+
+  const setTheme = (nextTheme: Theme) => {
+    if (nextTheme === 'light') {
+      setThemeState('light')
+      return
+    }
+
+    setThemeState('light')
+  }
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme') as Theme | null
+    if (stored && stored !== 'dark' && stored !== 'system') {
+      setThemeState('light')
+      return
+    }
+
+    setThemeState('light')
+  }, [])
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.classList.remove('light', 'dark')
+    root.classList.add('light')
+    setActualTheme('light')
+    localStorage.setItem('theme', 'light')
+  }, [theme])
+```
+
+### Result
+The site now stays in light mode regardless of OS/browser dark-mode preferences or stored theme values.
