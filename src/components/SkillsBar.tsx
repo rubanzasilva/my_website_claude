@@ -11,20 +11,20 @@ const SkillsBar = () => {
     {
       icon: <Rocket className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-primary',
-      title: 'ML Deployment',
-      description: 'Serving, testing, monitoring, integration',
+      title: 'ML Production',
+      description: 'Serving, deploying, testing, monitoring, integration',
     },
     {
       icon: <Code className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-secondary/60',
       title: 'Software Development',
-      description: 'Python, PyTorch, fastai, sklearn',
+      description: 'Python',
     },
     {
       icon: <Globe className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-secondary/60',
       title: 'Web Development',
-      description: 'React, Next.js, 9+ years shipping',
+      description: 'HTML, CSS, JavaScript, Reactjs, Next.js, FastHTML',
     },
   ];
 

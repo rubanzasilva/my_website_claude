@@ -139,11 +139,11 @@ const Projects = () => {
       tags: ['React', 'E-commerce', 'Coffee', 'Uganda']
     },
     {
-      id: 'suwik',
-      title: 'Suwik Investments Website',
-      description: 'Suwik aims to be the leading exporter of the freshest, highest-quality agricultural products with guaranteed customer satisfaction.',
+      id: 'aoc',
+      title: 'Advent of Code',
+      description: 'Solving programming puzzles and challenges from the Advent of Code series.',
       image: 'https://d322abd807wvow.cloudfront.net/suwik-photos/suwikLogo.jpeg',
-      category: 'Web Development',
+      category: 'Coding Challenges',
       links: {
         demo: 'https://www.suwik.xyz/',
         code: 'https://github.com/rubanzasilva/suwikEcommerce'
