@@ -142,13 +142,12 @@ const Projects = () => {
       id: 'aoc',
       title: 'Advent of Code',
       description: 'Solving programming puzzles and challenges from the Advent of Code series.',
-      image: 'https://d322abd807wvow.cloudfront.net/suwik-photos/suwikLogo.jpeg',
+      image: 'https://d322abd807wvow.cloudfront.net/suwik-photos/aoc-compressed.png',
       category: 'Coding Challenges',
       links: {
-        demo: 'https://www.suwik.xyz/',
-        code: 'https://github.com/rubanzasilva/suwikEcommerce'
+        code: 'https://share.solveit.pub/d/c466bf1dc4223a48266da51268442646'
       },
-      tags: ['React', 'E-commerce', 'Agriculture', 'Export']
+      tags: ['Python', 'Coding Challenges', 'Algorithms', 'Puzzles']
     }
   ];
 
