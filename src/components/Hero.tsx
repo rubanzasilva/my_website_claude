@@ -17,7 +17,7 @@ const Hero = () => {
           {/* Left: message */}
           <div className="max-lg:order-2 max-lg:text-center lg:text-left">
             <h1 className="font-heading font-black text-ploy-text-primary tracking-tight max-md:text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-balance">
-              I build production-ready ML systems, end to end.
+              I am a machine learning engineer building AI/ML systems to solve business problems.
             </h1>
             <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
               Machine learning engineer and software developer with 7+ years across the ML lifecycle from problem scoping, data engineering to building, serving, deploying, monitoring and integrating models into software applications.
