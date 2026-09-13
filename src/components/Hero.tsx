@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="max-w-screen-xl mx-auto grid items-center grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16">
           {/* Left: message */}
           <div className="max-lg:order-2 max-lg:text-center lg:text-left">
-            <h1 className="font-heading font-black text-ploy-text-primary tracking-normal max-md:text-3xl md:text-4xl lg:text-5xl leading-none text-balance">
+            <h1 className="font-heading font-black text-ploy-text-primary tracking-normal max-md:text-3xl md:text-4xl lg:text-5xl leading-tight text-balance">
               Machine learning engineer building AI/ML systems to solve business problems.
             </h1>
             <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
