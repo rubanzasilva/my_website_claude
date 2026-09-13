@@ -5,26 +5,26 @@ const SkillsBar = () => {
     {
       icon: <Brain className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-primary',
+      title: 'Data Engineering',
+      description: 'Extracting, transforming, and loading data',
+    },
+    {
+      icon: <Brain className="w-5 h-5" />,
+      bgColor: 'bg-ploy-accent-primary',
       title: 'Machine Learning',
       description: 'EDA, feature engineering, model building',
     },
     {
       icon: <Rocket className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-primary',
-      title: 'ML Production',
-      description: 'Serving, deploying, testing, monitoring, integration',
-    },
-    {
-      icon: <Code className="w-5 h-5" />,
-      bgColor: 'bg-ploy-accent-secondary/60',
-      title: 'Software Development',
-      description: 'Python',
+      title: 'Serving and deployment',
+      description: 'Serving, deploying, monitoring, API integration, retraining',
     },
     {
       icon: <Globe className="w-5 h-5" />,
       bgColor: 'bg-ploy-accent-secondary/60',
-      title: 'Web Development',
-      description: 'HTML, CSS, JavaScript, Reactjs, Next.js, FastHTML',
+      title: 'Software Development',
+      description: 'Python, HTML, CSS, JavaScript, Reactjs, Next.js, FastHTML',
     },
   ];
 

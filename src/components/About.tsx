@@ -25,10 +25,11 @@ const About = () => {
                 About me
               </h2>
               <p className="mt-6 text-lg text-ploy-text-primary leading-relaxed">
-                I possess over 7+ years of hands-on machine learning experience, building ML systems from the ground up. I can implement diverse architectures from scratch — from gradient boosting and basic neural networks to the large-scale networks behind today&rsquo;s generative AI, including image generation and large language models.
+                Over the years, Ive worked across the full lifecycle of ML products, which includes translating business problems into performance metrics tied to business objectives,data engineering and analysis, building simple baselines before introducing machine learning, model building, serving, deployment, and integrating these model predictions into software, while setting up monitoring and the retraining feedback loop needed to keep models accurate and useful over time.
+Depending on the project, this has meant owning that process end to end, or focusing specifically on model development, serving, and deployment within an existing pipeline.
               </p>
               <p className="mt-4 text-lg text-ploy-text-secondary leading-relaxed">
-                I&rsquo;m proficient with Python, PyTorch, fastai, and sklearn, and have 9+ years building software applications with HTML, CSS, JavaScript, React, Next.js, and other modern web technologies.
+                I&rsquo;ve built predictive and generative models with Python, PyTorch, fastai, sklearn and various other common algorithms. In addition, I have 9+ years building software applications with HTML, CSS, JavaScript, React, Next.js, and other modern web technologies.
               </p>
 
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -50,7 +51,7 @@ const About = () => {
                 My background
               </h3>
               <p className="mt-3 text-ploy-text-secondary leading-relaxed">
-                A strong foundation in software engineering, working across every stage of the machine learning lifecycle:
+                A strong foundation in software engineering, and I apply these principles while working across the machine learning lifecycle.
               </p>
               <ul className="mt-5 space-y-3">
                 {background.map((item) => (
