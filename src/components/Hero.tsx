@@ -16,17 +16,18 @@ const Hero = () => {
         <div className="max-w-screen-xl mx-auto grid items-center grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16">
           {/* Left: message */}
           <div className="max-lg:order-2 max-lg:text-center lg:text-left">
-            <h1 className="font-heading font-black text-ploy-text-primary tracking-tight max-md:text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-balance">
-              I build production-ready ML systems, end to end.
+            <h1 className="font-heading font-black text-ploy-text-primary tracking-normal max-md:text-3xl md:text-4xl lg:text-5xl leading-tight text-balance">
+              Machine learning engineer building AI/ML systems to solve business problems.
             </h1>
             <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
-              Machine learning engineer and software developer with 7+ years across the ML lifecycle from problem scoping, data engineering to building, serving, deploying, monitoring and integrating models into software applications.
+              This spans everything from a defined problem, data engineering, and model building to ML predictions integrated into production software, with a retraining loop that monitors for change and keeps the system accurate over time.
             </p>
 
             <div className="mt-9 flex items-center gap-5 max-lg:justify-center">
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.location.href = 'mailto:abc@silverrubanza.com'}
                 className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
+aria-label="Work with me"
               >
                 Work with me
                 <ArrowRight size={18} />
