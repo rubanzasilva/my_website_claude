@@ -27,7 +27,7 @@ const Hero = () => {
               <button
                 onClick={() => window.location.href = 'mailto:abc@silverrubanza.com'}
                 className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
-                aria-label="Email me"
+aria-label="Work with me"
               >
                 Work with me
                 <ArrowRight size={18} />
