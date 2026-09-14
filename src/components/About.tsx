@@ -25,7 +25,7 @@ const About = () => {
                 About me
               </h2>
               <p className="mt-6 text-lg text-ploy-text-primary leading-relaxed">
-                Over the years, Ive worked across the full lifecycle of ML products, which includes translating business problems into performance metrics tied to business objectives,data engineering and analysis, building simple baselines before introducing machine learning, model building, serving, deployment, and integrating these model predictions into software, while setting up monitoring and the retraining feedback loop needed to keep models accurate and useful over time.
+                Over the years, I've worked across the full lifecycle of ML products, which includes translating business problems into performance metrics tied to business objectives, data engineering and analysis, building simple baselines before introducing machine learning, model building, serving, deployment, and integrating model predictions into software, while setting up monitoring and the retraining feedback loop needed to keep models accurate and useful over time.
 Depending on the project, this has meant owning that process end to end, or focusing specifically on model development, serving, and deployment within an existing pipeline.
               </p>
               <p className="mt-4 text-lg text-ploy-text-secondary leading-relaxed">
