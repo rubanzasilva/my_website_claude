@@ -20,7 +20,7 @@ const Hero = () => {
               Machine learning engineer building AI/ML systems to solve business problems.
             </h1>
             <p className="mt-7 text-ploy-text-secondary max-md:text-lg md:text-xl leading-relaxed max-w-xl max-lg:mx-auto">
-              This spans everything from a defined problem, data engineering, and model building to ML predictions integrated into production software, with a retraining loop that monitors for change and keeps the system accurate over time.
+              This spans everything from defining a problem and metrics, data engineering and analysis, model building to ML predictions integrated into production software, with a retraining loop that monitors for change and keeps the system accurate over time.
             </p>
 
             <div className="mt-9 flex items-center gap-5 max-lg:justify-center">
