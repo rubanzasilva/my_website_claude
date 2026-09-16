@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X, Mail, ArrowRight } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,12 +61,13 @@ const Header = () => {
             >
               <Mail size={18} />
             </a>
-            <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
-            >
-              Work with me
-            </button>
+          <button
+                onClick={() => window.location.href = 'mailto:abc@silverrubanza.com'}
+                className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
+aria-label="Work with me"
+              >
+                Work with me
+              </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,14 +111,13 @@ const Header = () => {
                 Email me
               </a>
               <button
-                onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  setIsOpen(false);
-                }}
-                className="bg-ploy-button-primary-background text-ploy-button-primary-text text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity w-fit cursor-pointer"
+                onClick={() => window.location.href = 'mailto:abc@silverrubanza.com'}
+                className="inline-flex items-center gap-2 rounded-full bg-ploy-button-primary-background px-7 py-4 text-base font-medium text-ploy-button-primary-text transition-opacity hover:opacity-90 cursor-pointer"
+aria-label="Work with me"
               >
                 Work with me
               </button>
+              
             </div>
           </nav>
         )}
