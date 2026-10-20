@@ -32,7 +32,7 @@ const Projects = () => {
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/dalle_deployment.webp',
       category: 'ML/AI Serving & Deployment',
       links: {
-        article: 'https://nbsanity.com/static/64b506b80020adafd31defb4d6afb508/load.html'
+        article: 'https://nbsanity.com/static/ac40bb062434c7446906d3eb8875e061/load.html'
       },
       tags: ['BentoML', 'Machine Learning', 'Deployment', 'FastAI']
     },
