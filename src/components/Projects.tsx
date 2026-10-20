@@ -54,7 +54,7 @@ const Projects = () => {
       image: 'https://d3q0oijmiduzg2.cloudfront.net/rubanzasilver/stable-diffusion-ph.webp',
       category: 'Machine Learning',
       links: {
-        article: 'https://stable-diffusion-1.flexiblefunctions.com',
+        article: 'https://stable-diffusion.flexiblefunctions.com',
       },
       tags: ['Stable Diffusion', 'Generative AI', 'AI Art']
     },
