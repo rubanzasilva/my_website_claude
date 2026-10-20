@@ -81,9 +81,6 @@ const Footer = () => {
                 <p className="font-eyebrow text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
                   Get in touch
                 </p>
-                <h3 className="mt-5 font-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-                  Have a project in mind? Let&rsquo;s talk.
-                </h3>
                 <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <a
                     href={`mailto:${email}`}
