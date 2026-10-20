@@ -36,7 +36,7 @@ const Footer = () => {
 
                 <div className="mt-8 flex items-center gap-2 text-gray-400">
                   <MapPin size={16} />
-                  <span className="text-sm">Kampala, Uganda — available worldwide</span>
+                  <span className="text-sm">I work remotely and am available worldwide</span>
                 </div>
 
                 <div className="mt-8 flex items-center gap-4">
