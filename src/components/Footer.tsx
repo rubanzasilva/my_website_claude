@@ -1,28 +1,20 @@
 'use client';
 import { useState } from 'react';
-import { Send, MapPin, ArrowUpRight } from 'lucide-react';
+import { Mail, Copy, Check, MapPin, ArrowUpRight } from 'lucide-react';
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const email = 'abc@silverrubanza.com';
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent! Thank you for reaching out.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopyStatus('copied');
+    } catch {
+      setCopyStatus('error');
+      window.prompt('Copy this email address:', email);
+    }
   };
 
   return (
@@ -39,12 +31,12 @@ const Footer = () => {
                 </h2>
                 <p className="mt-5 text-lg text-gray-400 leading-relaxed">
                   Have an ML system to build, deploy, or improve?<br />
-                  Send a note and I&rsquo;ll get back to you.
+                  Send me an email and I&rsquo;ll get back to you.
                 </p>
 
                 <div className="mt-8 flex items-center gap-2 text-gray-400">
                   <MapPin size={16} />
-                  <span className="text-sm">Kampala, Uganda — available worldwide</span>
+                  <span className="text-sm">I work remotely and am available worldwide</span>
                 </div>
 
                 <div className="mt-8 flex items-center gap-4">
@@ -84,55 +76,35 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Right: form */}
-              <div className="bg-white dark:bg-ploy-neutral-secondary rounded-2xl p-8">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
-                      required
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Your email"
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
-                      required
-                    />
-                  </div>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Subject"
-                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500"
-                    required
-                  />
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your message"
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-ploy-neutral-primary placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-500 resize-none"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="w-full bg-black dark:bg-white text-white dark:text-black font-medium py-3.5 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer"
+              {/* Right: email contact */}
+              <div className="self-center rounded-2xl bg-white p-6 text-gray-950 sm:p-10">
+                <p className="font-eyebrow text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
+                  Get in touch
+                </p>
+                <h3 className="mt-5 font-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+                  Have a project in mind? Let&rsquo;s talk.
+                </h3>
+                <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <a
+                    href={`mailto:${email}`}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-5 py-4 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-950"
                   >
-                    <Send size={16} />
-                    Send message
+                    <Mail size={20} aria-hidden="true" />
+                    Email me
+                  </a>
+                  <button
+                    type="button"
+                    onClick={copyEmail}
+                    className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-gray-950 bg-white px-5 py-4 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-950"
+                  >
+                    {copyStatus === 'copied' ? <Check size={20} aria-hidden="true" /> : <Copy size={20} aria-hidden="true" />}
+                    {copyStatus === 'copied' ? 'Copied!' : 'Copy email'}
                   </button>
-                </form>
+                </div>
+                <p role="status" className="sr-only">
+                  {copyStatus === 'copied' && 'Email address copied to clipboard.'}
+                  {copyStatus === 'error' && 'Automatic copying was unavailable. Copy the address from the dialog.'}
+                </p>
               </div>
             </div>
 
