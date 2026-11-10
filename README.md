@@ -45,6 +45,16 @@ For a local production preview, run `npm run build` followed by `npm start`.
 See Google's [container installation guide](https://support.google.com/tagmanager/answer/14847097)
 and [single-page application measurement guide](https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications).
 
+## Hotjar
+
+Hotjar site `6850646` is installed in the root layout using `next/script`.
+It loads asynchronously after the page becomes interactive and runs only in
+production, so `npm run dev` does not record development visits.
+
+Rebuild and deploy the website to activate it, then visit the live site and use
+Hotjar's installation verification for this site. For a local production
+preview, run `npm run build` followed by `npm start`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
